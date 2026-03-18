@@ -7,5 +7,6 @@ admin.site.register(JobRoleSkill)
 
 class ResumeAdmin(admin.ModelAdmin):
     list_display = ('name', 'job_role', 'match_score')
+    ordering = ('-match_score',)
     
 admin.site.register(Resume, ResumeAdmin)
